@@ -53,7 +53,7 @@ libcatta_la_SOURCES = \
 	browse-service.c \
 	resolve-service.c \
 	dns.c dns.h \
-	rr.c rr.h rr-util.h \
+	rr.c rr-util.h \
 	log.c \
 	browse-dns-server.c \
 	fdutil.h fdutil.c \

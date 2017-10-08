@@ -346,7 +346,6 @@ src/Makefile
 include/Makefile
 tests/Makefile
 examples/Makefile
-m4/Makefile
 ])
 AC_OUTPUT
 

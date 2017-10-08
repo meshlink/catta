@@ -39,7 +39,6 @@ EXTRA_DIST = \
 	doxygen_to_devhelp.xsl
 
 SUBDIRS = \
-	m4 \
 	src \
     include \
 	tests \
