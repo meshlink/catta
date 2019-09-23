@@ -132,7 +132,7 @@ void catta_hw_interface_update_rrs(CattaHwInterface *hw, int remove_rrs) {
             return; /* OOM */
 
         if (catta_s_entry_group_is_empty(hw->entry_group)) {
-            char name[CATTA_LABEL_MAX], unescaped[CATTA_LABEL_MAX], mac[256];
+            char name[CATTA_LABEL_MAX + 256 + 20], unescaped[CATTA_LABEL_MAX], mac[256];
             const char *p = m->server->host_name;
 
             catta_unescape_label(&p, unescaped, sizeof(unescaped));

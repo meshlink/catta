@@ -383,7 +383,7 @@ void catta_interface_monitor_sync(CattaInterfaceMonitor *m) {
      * dumping */
 
     while (!m->list_complete)
-        if (!catta_netlink_work(m->osdep.netlink, 1) == 0)
+        if (catta_netlink_work(m->osdep.netlink, 1) != 0)
             break;
 
     /* At this point Catta knows about all local interfaces and

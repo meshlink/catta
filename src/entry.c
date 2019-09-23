@@ -901,7 +901,7 @@ static CattaEntry *server_add_dns_server_name(
     uint16_t port /** should be 53 */) {
 
     CattaEntry *e;
-    char t[CATTA_DOMAIN_NAME_MAX], normalized_d[CATTA_DOMAIN_NAME_MAX], *n;
+    char t[CATTA_DOMAIN_NAME_MAX + 20], normalized_d[CATTA_DOMAIN_NAME_MAX], *n;
 
     CattaRecord *r;
 
@@ -957,7 +957,7 @@ int catta_server_add_dns_server_address(
     uint16_t port /** should be 53 */) {
 
     CattaRecord *r;
-    char n[64], h[64];
+    char n[64 + 20], h[64];
     CattaEntry *a_entry, *s_entry;
 
     assert(s);
