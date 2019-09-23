@@ -715,7 +715,7 @@ int catta_server_add_service(
     const char *type,
     const char *domain,
     const char *host,
-    uint16_t port,
+    unsigned int port,
     ... ){
 
     va_list va;

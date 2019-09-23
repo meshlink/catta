@@ -114,7 +114,7 @@ int catta_server_add_service(
     const char *type,         /**< DNS-SD type, e.g. "_http._tcp" */
     const char *domain,
     const char *host,         /**< Host name where this servcie resides, or NULL if on the local host */
-    uint16_t port,              /**< Port number of the service */
+    unsigned int port,        /**< Port number of the service */
     ...  /**< Text records, terminated by NULL */) CATTA_GCC_SENTINEL;
 
 /** Mostly identical to catta_server_add_service(), but takes an CattaStringList object for the TXT records.  The CattaStringList object is copied. */
