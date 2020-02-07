@@ -50,6 +50,7 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_GCC_TRADITIONAL
+AX_PTHREAD(,AC_MSG_ERROR([Missing POSIX Threads support]))
 
 if test x"$ac_cv_prog_cc_c99" = x"no"; then
     AC_MSG_ERROR([C99 support is required])
@@ -143,8 +144,6 @@ fi
 
 # libtool stuff
 LT_INIT([win32-dll])
-
-ACX_PTHREAD(,AC_MSG_ERROR([Missing POSIX Threads support]))
 
 #
 # Check for netlink.h
