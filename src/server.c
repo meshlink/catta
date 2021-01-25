@@ -1447,6 +1447,16 @@ CattaServer *catta_server_new(const CattaPoll *poll_api, const CattaServerConfig
     s->multicast_lookup_engine = catta_multicast_lookup_engine_new(s);
 
     s->monitor = catta_interface_monitor_new(s);
+
+    if (!s->monitor) {
+        if (error)
+            *error = CATTA_ERR_NOT_SUPPORTED;
+        catta_server_config_free(&s->config);
+        catta_free(s);
+        winsock_exit();
+        return NULL;
+    }
+
     catta_interface_monitor_sync(s->monitor);
 
     register_localhost(s);
